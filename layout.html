@@ -1,0 +1,28 @@
+<template name="Layout">
+    <div class="wrap">
+
+        <header class="header">
+            <div class="header-wrap">
+                <a class="homelink" href="/#"><span class="logo">ST</span><h1 class="name">Scott Tolinski</h1></a>
+                {{> yield "nav"}}
+            </div>
+        </header>
+
+        {{> yield}}
+
+    </div>
+
+    <footer class="footer">
+
+        <h3>Where to find me</h3>
+        <ul class="social">
+            <li><a target="_blank" href="https://twitter.com/stolinski"><i class="fa fa-twitter"><span class="text">Twitter</span></i></a></li>
+            <li><a target="_blank" href="http://www.youtube.com/user/LevelUpTuts"><i class="fa fa-youtube"><span class="text">Youtube</span></i></a></li>
+            <li><a target="_blank" href="https://github.com/stolinski"><i class="fa fa-github"><span class="text">Github</span></i></a></li>
+            <li><a target="_blank" href="https://bitbucket.org/stolinski"><i class="fa fa-bitbucket"><span class="text">Bitbucket</span></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/stolinski"><i class="fa fa-linkedin"><span class="text">LinkedIn</span></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/LevelUpTuts"><i class="fa fa-facebook"><span class="text">Facebook</span></i></a></li>
+        </ul>
+    </footer>
+
+</template>
