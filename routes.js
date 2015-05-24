@@ -32,9 +32,8 @@ Router.route('/contact', function() {
 
 
 Router.onAfterAction(function() {
-        Session.set('page', this.route.getName());
-        $('body').removeClass();
-        $('body').addClass(this.route.getName());
-        document.title = 'Scott Tolinski - ' + this.route.getName().capitalize();
-    }
-);
+    Session.set('page', this.route.getName());
+    $('body').removeClass();
+    $('body').addClass(this.route.getName());
+    document.title = 'Scott Tolinski - ' + this.route.getName().capitalize();
+});

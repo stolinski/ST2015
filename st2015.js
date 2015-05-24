@@ -4,7 +4,8 @@ String.prototype.capitalize = function() {
 
 
 if (Meteor.isClient) {
-
+    Template.Layout.helpers({
+    });
 
 }
 
