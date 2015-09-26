@@ -18,7 +18,6 @@
     $IMPORTS
 \*------------------------------------*/
 
-@import 'nib'
 @import '/styl/_vars'
 @import '/styl/_mixins'
 
@@ -85,6 +84,9 @@ h3
         font-size:16px
         margin-left: 10px
         opacity: 0.5
+
+p
+    line-height 1.5 
 
 body
     background #333
@@ -316,6 +318,9 @@ for $item, bgcolor in $pages
 
 
 /* $about */
+.about-body
+    max-width: 1000px
+
 // Resume
 .resume
     background: $footer
