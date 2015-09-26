@@ -4,16 +4,7 @@
 
 
 trans($sec = 0.2s)
-    -webkit-transition all $sec ease-out
-    -moz-transition all $sec ease-out
-    -ms-transition all $sec ease-out
-    -o-transition all $sec ease-out
     transition all $sec ease-out
-
-calculateRem($size) {
-  $remSize = $size / 16px;
-  return unit($remSize * 1rem, 'rem')
-}
 
 fs($size) {
   font-size: $size;
