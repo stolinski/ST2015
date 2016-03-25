@@ -6,9 +6,7 @@
 
 accounts-ui
 stolinski:stylus-multi
-iron:router
-natestrauser:font-awesome
-percolate:momentum-iron-router
+kadira:flow-router-ssr
 standard-minifiers
 meteor-base
 mobile-experience

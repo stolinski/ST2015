@@ -4,3 +4,6 @@ _/.DS_Store
 mup.json
 
 *.tgz.gz
+
+node_modules
+node_modules/*

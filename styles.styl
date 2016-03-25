@@ -20,6 +20,7 @@
 
 @import '/styl/_vars'
 @import '/styl/_mixins'
+@import '/styl/_easings'
 
 normalize-css()
 
@@ -86,7 +87,7 @@ h3
         opacity: 0.5
 
 p
-    line-height 1.5 
+    line-height 1.5
 
 body
     background #333
@@ -219,10 +220,6 @@ video
     &.download
         text-align: center
         background: #16A085
-    &:after
-        margin-left: 20px
-        content:"\f019"
-        font-family:'FontAwesome'
 
 .res-download
     text-align: center
@@ -437,16 +434,12 @@ for $item, bgcolor in $pages
 
 
 /* $social */
-for $site, $bgcolor in $social
-  .social
-    .fa-{$site}
-      background: $bgcolor
-      &:hover
-        background: $bgcolor - 40
-
-
-
-
+// for $site, $bgcolor in $social
+//   .social
+//     .fa-{$site}
+//       background: $bgcolor
+//       &:hover
+//         background: $bgcolor - 40
 
 .social
     text-align: center
@@ -468,3 +461,8 @@ for $site, $bgcolor in $social
                 margin-left: 20px
     i
         font-style normal
+    for $site, $bgcolor in $social
+        .fa-{$site}
+            background: $bgcolor
+            &:hover
+                background: $bgcolor - 40
