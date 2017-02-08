@@ -73,6 +73,10 @@ ol
 h2
     fs(38px)
     margin-bottom: 30px
+    text-transform uppercase
+    font-weight 900
+    letter-spacing 5px
+    text-align center
 
 
 h3
@@ -90,9 +94,11 @@ p
     line-height 1.5
 
 body
-    background #333
+    background #111
     color white
     font-family 'Lato', sans-serif
+    > div, > div > div
+        height 100%
 
 video
     opacity: 0
@@ -108,7 +114,7 @@ video
     trans()
 
 .home video
-    opacity: 0.1
+    opacity: 0.2
 
 
 +above($med)
@@ -162,7 +168,6 @@ video
 /*--$HEADER--*/
 
 .header
-    background: #ECF0F1
     overflow: hidden
     height: 52px
     z-index: 1000
@@ -176,7 +181,7 @@ video
     letter-spacing: 1px
     background: $pages.home
     float: left
-    color: white
+    color: #111
     padding: 10px
     position: relative
     z-index: 100
@@ -194,7 +199,7 @@ video
         z-index: -1
         background-image: linear-gradient(90deg, $pages.about 33.333%, $pages.projects 33.333%, $pages.projects 66.667%, $pages.contact 66.667%)
         background-size: 156px 52px
-        trans()
+        trans(0.3s, easeInOutQuint)
 
 .about .logo:before
     left:0px
@@ -228,19 +233,23 @@ video
     margin: 0
     position: absolute
     z-index: 10
-    left: -200px
+    transform: translate3d(-100%, 0, 0)
+    text-transform uppercase
+    font-weight 900
+    letter-spacing 5px
     fs(24px)
     text-decoration: none
     font-weight: 900
     line-height: 52px
-    color:#333
-    trans()
+    color:#FFF
+    transition: 0.3s all cubic-bezier(0.895, 0.03, 0.685, 0.22)
 
 
 +above($small)
     .header:hover
         .name
-            left:65px
+            transform: translate3d(80px, 0, 0)
+            transition: 0.3s all cubic-bezier(0.165, 0.84, 0.44, 1)
 
 .main-nav
     float: right
@@ -254,8 +263,10 @@ video
     a
         text-decoration: none
         padding:15px 10px 18px
-        color:#333
-        font-weight: 700
+        color:#FFF
+        font-weight 900
+        text-transform uppercase
+        letter-spacing 5px
         display: block
         border-bottom: 4px solid #ECF0F1
         background rgba(#000, 0)
@@ -270,7 +281,7 @@ video
 
 /* $all_pages */
 .main-content
-    padding: 120px 4% 80px
+    padding: 100px 8% 80px
     p
         fs(24px)
         margin-bottom: 20px
@@ -280,20 +291,20 @@ video
 
 
 for $item, bgcolor in $pages
-    body.{$item} nav a.{$item}
+    .{$item} nav a.{$item}
         padding-bottom:14px
         background rgba(#000, 0.1)
     a.{$item}
         border-color: bgcolor
-    body.{$item} .main-content a
+    .{$item} .main-content a
         color: bgcolor
         &:hover
             text-decoration: underline
-    body.{$item} ::-moz-selection
+    .{$item} ::-moz-selection
         background: bgcolor
-    body.{$item} ::selection
+    .{$item} ::selection
         background: bgcolor
-    body.{$item} .btn
+    .{$item} .btn
         background: bgcolor
         &:hover
           background: bgcolor - 30
@@ -306,6 +317,9 @@ for $item, bgcolor in $pages
         margin-top:0
         font-weight: 300
         fs: 36px
+        text-transform none
+        text-align left
+
         +above($med)
             margin-top: 40px
             fs: 64px
@@ -317,10 +331,11 @@ for $item, bgcolor in $pages
 /* $about */
 .about-body
     max-width: 1000px
+    margin auto
 
 // Resume
 .resume
-    background: $footer
+    background: #222
     width: 98%
     margin: 80px auto 50px
     font-family:"Inconsolata", monospace
@@ -414,55 +429,53 @@ for $item, bgcolor in $pages
     position: relative
     z-index: 1000
     +above($med)
-        height: 170px
+        height: 210px
 
 
 
 .footer
     background: $footer
     padding:40px 4% 60px
-    cf()
+    clearfix()
     a
         color:white
         text-decoration: none
     h3
+        text-transform uppercase
+        font-weight 900
+        margin-bottom 40px
+        letter-spacing 5px
         text-align: center
-        +above($med)
-            text-align: left
 
 
 
 
 /* $social */
-// for $site, $bgcolor in $social
-//   .social
-//     .fa-{$site}
-//       background: $bgcolor
-//       &:hover
-//         background: $bgcolor - 40
+for $site, $bgcolor in $social
+    .social
+        .{$site}
+            background: $bgcolor
+            &:hover
+                background: $bgcolor - 40
 
 .social
     text-align: center
     margin 0
     padding 0
-    cf()
-    .fa
+    clearfix()
+    a
         padding: 5px 8px
         border-radius: 3px
         trans()
     .text
-        padding-left:10px
         font-family: 'Lato', sans-serif
     li
         margin-bottom: 20px
         +above($med)
-            float: left
             + li
                 margin-left: 20px
     i
         font-style normal
-    for $site, $bgcolor in $social
-        .fa-{$site}
-            background: $bgcolor
-            &:hover
-                background: $bgcolor - 40
+    +above($med)
+        display flex
+        justify-content center

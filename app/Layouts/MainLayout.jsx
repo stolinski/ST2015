@@ -1,9 +1,8 @@
 import React from 'react';
 
-export const MainLayout = ({content}) => (
-    <div>
+export const MainLayout = ({content, pageClass}) => (
+    <div className={pageClass}>
         <div className='wrap'>
-
             <header className='header'>
                 <div className='header-wrap'>
                     <a className='homelink' href='/#'><span className='logo'>ST</span>
@@ -18,42 +17,40 @@ export const MainLayout = ({content}) => (
                     </nav>
                 </div>
             </header>
-
             {content()}
-
         </div>
 
         <footer className='footer'>
             <h3>Where to find me</h3>
-            <ul classNameName='social'>
+            <ul className='social'>
                 <li>
-                    <a target='_blank' href='https://twitter.com/stolinski'>
-                        <i className='fa fa-twitter'><span className='text'>Twitter</span></i>
+                    <a target='_blank' className='twitter' href='https://twitter.com/stolinski'>
+                        <span className='text'>Twitter</span>
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' href='http://www.youtube.com/user/LevelUpTuts'>
-                        <i className='fa fa-youtube'><span className='text'>Youtube</span></i>
+                    <a target='_blank' className='youtube' href='http://www.youtube.com/user/LevelUpTuts'>
+                        <span className='text'>Youtube</span>
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' href='https://github.com/stolinski'>
-                        <i className='fa fa-github'><span className='text'>Github</span></i>
+                    <a target='_blank' className='github' href='https://github.com/stolinski'>
+                        <span className='text'>Github</span>
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' href='https://bitbucket.org/stolinski'>
-                        <i className='fa fa-bitbucket'><span className='text'>Bitbucket</span></i>
+                    <a target='_blank' className='bitbucket' href='https://bitbucket.org/stolinski'>
+                        <span className='text'>Bitbucket</span>
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' href='https://www.linkedin.com/in/stolinski'>
-                        <i className='fa fa-linkedin'><span className='text'>LinkedIn</span></i>
+                    <a target='_blank' className='linkedin' href='https://www.linkedin.com/in/stolinski'>
+                        <span className='text'>LinkedIn</span>
                     </a>
                 </li>
                 <li>
-                    <a target='_blank' href='https://www.facebook.com/LevelUpTuts'>
-                        <i className='fa fa-facebook'><span className='text'>Facebook</span></i>
+                    <a target='_blank' className='facebook' href='https://www.facebook.com/LevelUpTuts'>
+                        <span className='text'>Facebook</span>
                     </a>
                 </li>
             </ul>

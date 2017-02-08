@@ -1,3 +1,5 @@
+import React from 'react';
+import {mount} from 'react-mounter';
 
 import {MainLayout} from './Layouts/MainLayout.jsx';
 import Home from './Pages/Home.jsx';
@@ -7,32 +9,36 @@ import Contact from './Pages/Contact.jsx';
 
 FlowRouter.route('/', {
     action()  {
-        ReactLayout.render(MainLayout, {
-            content: <Home />
+        mount(MainLayout, {
+            content: () => (<Home />),
+            pageClass: 'home'
         });
     }
 });
 
 FlowRouter.route('/about', {
     action()  {
-        ReactLayout.render(MainLayout, {
-            content: <About />
+        mount(MainLayout, {
+            content: () => (<About />),
+            pageClass: 'about'
         });
     }
 });
 
 FlowRouter.route('/projects', {
     action()  {
-        ReactLayout.render(MainLayout, {
-            content: <Projects />
+        mount(MainLayout, {
+            content: () => (<Projects />),
+            pageClass: 'projects'
         });
     }
 });
 
 FlowRouter.route('/contact', {
     action()  {
-        ReactLayout.render(MainLayout, {
-            content: <Contact />
+        mount(MainLayout, {
+            content: () => (<Contact />),
+            pageClass: 'contact'
         });
     }
 });
