@@ -5,7 +5,6 @@ export default class Projects extends Component {
     render() {
         return (
             <main id='appbody' className='main-content'>
-                <Helmet title="Scott Tolinski's Featured Projects" />
                 <h2 className='page-title'>Projects</h2>
                 <p>I've worked on many types of projects both personal and professional. Here are some projects I've developed/created.</p>
 

@@ -5,7 +5,6 @@ export default class About extends Component {
     render() {
         return (
             <div>
-                <Helmet title="About Scott Tolinski" />
                 <main id='appbody' className='main-content'>
                     <h2>About</h2>
                     <div className='about-body'>

@@ -1,23 +1,24 @@
 import React from 'react';
+import {Link } from 'react-router'
 
-export const MainLayout = ({content, pageClass}) => (
+export const MainLayout = ({children, pageClass}) => (
     <div className={pageClass}>
         <div className='wrap'>
             <header className='header'>
                 <div className='header-wrap'>
-                    <a className='homelink' href='/#'><span className='logo'>ST</span>
+                    <Link className='homelink' to='/'><span className='logo'>ST</span>
                         <h1 className='name'>Scott Tolinski</h1>
-                    </a>
+                    </Link>
                     <nav className='main-nav'>
                         <ul>
-                            <li><a className='about' href='/about'>About</a></li>
-                            <li><a className='projects' href='/projects'>Projects</a></li>
-                            <li><a className='contact' href='/contact'>Contact</a></li>
+                            <li><Link className='about' to='/about'>About</Link></li>
+                            <li><Link className='projects' to='/projects'>Projects</Link></li>
+                            <li><Link className='contact' to='/contact'>Contact</Link></li>
                         </ul>
                     </nav>
                 </div>
             </header>
-            {content()}
+            {children}
         </div>
 
         <footer className='footer'>
