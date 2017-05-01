@@ -22,7 +22,7 @@ import {
             // </Switch>
 
 export const MainLayout = ({location}) => (
-    <div className={location.pathname === "/" ? "home" : location.pathname.replace("/","")}>
+    <div>
         <div className='wrap'>
             <header className='header'>
                 <div className='header-wrap'>
