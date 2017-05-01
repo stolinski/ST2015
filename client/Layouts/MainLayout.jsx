@@ -1,8 +1,18 @@
 import React from 'react';
-import {Link } from 'react-router'
+import Home from '../Pages/Home';
+import About from '../Pages/About';
+import Projects from '../Pages/Projects';
+import Contact from '../Pages/Contact';
 
-export const MainLayout = ({children, pageClass}) => (
-    <div className={pageClass}>
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
+
+export const MainLayout = ({location}) => (
+    <div className={location.pathname === "/" ? "home" : location.pathname.replace("/","")}>
         <div className='wrap'>
             <header className='header'>
                 <div className='header-wrap'>
@@ -18,7 +28,10 @@ export const MainLayout = ({children, pageClass}) => (
                     </nav>
                 </div>
             </header>
-            {children}
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/projects" component={Projects}/>
+            <Route path="/contact" component={Contact}/>
         </div>
 
         <footer className='footer'>

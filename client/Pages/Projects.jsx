@@ -11,6 +11,15 @@ export default class Projects extends Component {
                 <ul className='project-list'>
                     <li>
                         <h3 className='project-title'>
+                            <a target='_blank' href='http://getatya.com/'>Atya</a>
+                        </h3>
+                        <p>
+                            Designed & Developed booking and artistic inspiration app:<br />
+                            Built With: Meteor, React, Stylus
+                        </p>
+                    </li>
+                    <li>
+                        <h3 className='project-title'>
                             <a target='_blank' href='http://www.ford.com/'>Ford.com Global UX</a>
                         </h3>
                         <p>
@@ -52,12 +61,6 @@ export default class Projects extends Component {
                             <a target='_blank' href='http://www.siggraph.org/'>ACM SIGGRAPH</a>
                         </h3>
                         <p>Built for: <a target='_blank' href='http://qltd.com'>Q LTD</a><br/>Built With: Drupal 7, Omega 3, Sass/Compass</p>
-                    </li>
-                    <li>
-                        <h3 className='project-title'>
-                            <a target='_blank' href='http://factory.umichcreative.org/'>Operations Leadership Factory</a>
-                        </h3>
-                        <p>Built for: <a target='_blank' href='http://creative.umich.edu/'>Michigan Creative</a><br/>Built With: Drupal 7, Omega 4, Sass/Compass/SingularityGS</p>
                     </li>
                     <li>
                         <h3 className='project-title'>
