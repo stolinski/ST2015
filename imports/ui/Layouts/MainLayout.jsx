@@ -1,15 +1,25 @@
 import React from 'react';
-import Home from '../Pages/Home';
-import About from '../Pages/About';
-import Projects from '../Pages/Projects';
-import Contact from '../Pages/Contact';
+// import Home from '../Pages/Home';
+// import About from '../Pages/About';
+// import Projects from '../Pages/Projects';
+// import Contact from '../Pages/Contact';
 
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom'
 
+// console.log(Home, About, Projects, Contact);
+
+
+            // <Switch>
+            //     <Route exact path="/" component={Home}/>
+            //     <Route path="/about" component={About}/>
+            //     <Route path="/projects" component={Projects}/>
+            //     <Route path="/contact" component={Contact}/>
+            // </Switch>
 
 export const MainLayout = ({location}) => (
     <div className={location.pathname === "/" ? "home" : location.pathname.replace("/","")}>
@@ -28,10 +38,7 @@ export const MainLayout = ({location}) => (
                     </nav>
                 </div>
             </header>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/projects" component={Projects}/>
-            <Route path="/contact" component={Contact}/>
+
         </div>
 
         <footer className='footer'>

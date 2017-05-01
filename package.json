@@ -17,20 +17,37 @@
   },
   "homepage": "https://github.com/stolinski/ST2015#readme",
   "dependencies": {
+    "actual": "^0.4.0",
     "classnames": "^2.2.3",
+    "electrode-react-ssr-caching": "^0.1.5",
+    "express": "^4.15.2",
+    "helmet": "^3.5.0",
+    "i18next-express-middleware": "^1.0.5",
+    "is-retina": "^1.0.3",
+    "lodash": "^4.17.4",
+    "logatim": "^0.9.0",
     "marked": "^0.3.5",
-    "moment": "^2.11.1",
+    "moment": "^2.18.1",
     "react": "^15.4.0",
     "react-addons-css-transition-group": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-helmet": "^5.0.3",
+    "react-i18next": "^3.1.0",
+    "react-intl": "^2.2.3",
+    "react-intl-redux": "^0.4.1",
     "react-mounter": "^1.1.0",
-    "react-router": "^3.0.2",
-    "react-router-dom": "^4.1.1"
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "receptacle": "^1.3.0",
+    "redux": "^3.6.0",
+    "serialize-javascript": "^1.3.0",
+    "url-pattern": "^1.0.3",
+    "sitemap": "^1.11.1",
+    "useragent": "^2.1.13",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.3",
-    "babel-eslint": "^7.1.1",
     "babel-jest": "^16.0.0",
     "babel-plugin-transform-class-properties": "^6.16.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -50,6 +67,9 @@
     "eslint-plugin-react": "^6.4.1",
     "jest": "^16.0.2",
     "react-test-renderer": "^15.4.0-rc.3",
-    "why-did-you-update": "^0.0.8"
+    "why-did-you-update": "^0.0.8",
+    "babel-eslint": "^7.2.1",
+    "eslint-plugin-class-property": "^1.0.3",
+    "react-addons-perf": "^15.4.2"
   }
 }
