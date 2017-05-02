@@ -36,7 +36,7 @@
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.4.0",
     "react-dom": "^15.5.4",
-    "react-helmet": "^5.0.3",
+    "react-helmet": "^5.0.0",
     "react-i18next": "^3.1.0",
     "react-intl": "^2.2.3",
     "react-intl-redux": "^0.4.1",

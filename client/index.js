@@ -1,7 +1,15 @@
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 import { createRouter, logger } from 'meteor/ssrwpo:ssr';
-import {Mainlayout} from '/imports/ui/Layouts/MainLayout';
+import { MainLayout } from '/imports/ui/Layouts/MainLayout';
 
-console.log(Mainlayout);
+const App = () =>
+  <Router>
+    <Route path="/" component={MainLayout} />
+  </Router>;
 
-createRouter({MainApp: MainLayout})
-.then(() => logger.info('Router started'));
+createRouter({ MainApp: App })
+  .then(() => logger.info('Router started'));
