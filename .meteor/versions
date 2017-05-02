@@ -61,7 +61,7 @@ spacebars@1.0.15
 spacebars-compiler@1.1.2
 spiderable@1.0.14-release-testing.0
 ssrwpo:minifierjs@2.0.0
-ssrwpo:ssr@2.4.0
+ssrwpo:ssr@2.5.0
 ssrwpo:uglifyjs2@0.6.0
 stylus@2.513.9
 templating@1.3.2
